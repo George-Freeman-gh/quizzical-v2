@@ -1,0 +1,366 @@
+html,body
+{ 
+  scroll-behavior: smooth;
+ 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.home-page {
+  background-color: #F5F7FB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.title {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1.953rem;
+  color: #293264;
+  margin: 0;
+  z-index: 1;
+}
+
+.home-description {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2em;
+  z-index: 1;
+  
+}
+
+.btn {
+  background-color: #4D5B9E;
+  place-self: center;
+  border-radius: 15px;
+  border: none;
+  padding:20px 55px;
+  color: #F5F7FB;
+  font-family: "Inter", sans-serif;
+  z-index: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.home-blue-blob {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  z-index: 0;
+}
+
+.home-yellow-blob {
+  position: absolute;
+  width: 500px;
+  top: 10%;
+  right: 27%;
+  z-index: 0;
+  animation:  move 10s ease-in-out infinite;
+}
+
+.question {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #293264;
+}
+
+
+.answer {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #4D5B9E;
+  padding: 2px 15px;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  color: #293264;
+  
+}
+
+
+
+.answer:disabled {
+  cursor: not-allowed;
+  opacity: 1; /* Override the default opacity change */
+  background-color: initial; /* Maintain the original background color */
+  color: initial; /* Maintain the original text color */
+  color: #293264;
+}
+
+
+
+.quiz-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4em;
+  flex-direction: column;
+  background-color: #F5F7FB;
+  overflow: hidden;
+  
+  
+}
+
+.questions-container {
+max-width: 700px;
+z-index: 1;
+}
+
+.score {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #293264;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.quiz-ended-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+
+
+
+/* Loading icon  */
+
+form {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000000;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  Form  */
+
+label, select{
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: #293264;
+
+}
+
+select {
+  background-color: #e7e9f3;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin-left: 1em;
+  cursor: pointer;
+  
+}
+
+@media screen and (max-width: 1000px ) {
+
+  .lds-roller {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    
+  }
+
+  .quiz-container {
+    padding-top: 2em;
+    padding-bottom: 3em;
+    position: relative;
+    
+  }
+
+  .score-container {
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+
+    
+  }
+  .quiz-ended-buttons  {
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 1em;
+  }
+
+  .quiz-ended-buttons > .btn {
+    width: 100%;
+  }
+
+  .answer {
+    padding: 1em 1em;
+    margin-left: 0;
+  }
+
+  .question-container {
+     width: 90vw;
+  }
+
+  .answers-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  }
+
+  select {
+    margin: 0;
+    text-align: center;
+    padding: 1em 2.25em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align-last: center;
+    background-image: url("select-arrows-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 10%;
+    margin-top: 0.6em;
+    
+
+  }
+
+  .select-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-blue-blob {
+    position: absolute;
+    width: 40%;
+  }
+
+  .home-yellow-blob {
+    position: absolute;
+    width: 60%;
+    top: 20%;
+    right: 10%;
+    
+   
+  }
+  
+}
+
+/* blobs animation */
+
+@keyframes move {
+
+  0%  {transform: scale(1) translate(-60px, -50px)}
+  38% {transform: scale(0.8) translate(30vw, 30vh) rotate(160deg);}
+  40% {transform: scale(0.8) translate(30vw, 30vh) rotate(160deg);}
+  78% {transform: scale(1.5) translate(-20vw, 50vh) rotate(-20deg);}
+  80% {transform: scale(1.5) translate(-20vw, 50vh) rotate(-20deg);}
+  100% {transform: scale(1) translate(-60px, -50px);}
+  
+  
+}
