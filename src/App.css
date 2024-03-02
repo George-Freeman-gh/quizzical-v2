@@ -115,6 +115,7 @@ body {
   overflow: hidden;
   
   
+  
 }
 
 .questions-container {
@@ -349,6 +350,12 @@ select {
    
   }
   
+}
+
+@media screen and (min-width: 1000px ) {
+  .quiz-container {
+    height: 100vh;
+  }
 }
 
 /* blobs animation */
