@@ -112,10 +112,6 @@ body {
   padding: 4em;
   flex-direction: column;
   background-color: #F5F7FB;
-  
-  
-  
-  
 }
 
 .questions-container {
@@ -354,7 +350,7 @@ select {
 
 @media screen and (min-width: 1000px ) {
   .quiz-container {
-    height: 100vh;
+    height: auto;
   }
 }
 
