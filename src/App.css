@@ -123,6 +123,7 @@ z-index: 1;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   color: #293264;
+  z-index: 1;
 }
 
 .score-container {
