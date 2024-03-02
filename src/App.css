@@ -281,6 +281,7 @@ select {
     flex-direction: column;
     gap: 1em;
     width: 100%;
+    z-index: 1;
 
     
   }
