@@ -348,11 +348,7 @@ select {
   
 }
 
-@media screen and (min-width: 1000px ) {
-  .quiz-container {
-    height: auto;
-  }
-}
+
 
 /* blobs animation */
 
