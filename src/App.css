@@ -62,7 +62,7 @@ body {
 }
 
 .home-yellow-blob {
-  position: absolute;
+  position: fixed;
   width: 500px;
   top: 10%;
   right: 27%;
