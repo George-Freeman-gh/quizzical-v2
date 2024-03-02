@@ -11,8 +11,6 @@ html,body
 body {
   padding: 0;
   margin: 0;
-  height: fit-content;
-  overflow: hidden;
 }
 
 .home-page {
