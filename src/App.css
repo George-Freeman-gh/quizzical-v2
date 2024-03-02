@@ -338,7 +338,7 @@ select {
   }
 
   .home-yellow-blob {
-    position: absolute;
+    position: fixed;
     width: 60%;
     top: 20%;
     right: 10%;
