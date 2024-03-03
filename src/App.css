@@ -320,7 +320,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-align-last: center;
-    background-image: url("select-arrows-svgrepo-com.svg");
+    background-image: url("./assets/select-arrows-svgrepo-com.svg");
     background-repeat: no-repeat;
     background-position: 100% 50%;
     background-size: 10%;
